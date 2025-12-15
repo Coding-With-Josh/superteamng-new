@@ -157,18 +157,21 @@ export const Nav = () => {
         {open && (
           <>
             <motion.div
-              className="fixed inset-0 z-300 bg-black/25 w-screen h-screen"
+              className="fixed inset-0 z-40 bg-black/25 w-screen h-screen"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
+              onTouchStart={(e) => e.stopPropagation()}
             />
             <motion.div
-              className="fixed right-0 top-0 z-40 h-screen w-[min(320px,80vw)] border-l border-white/10 bg-background px-6 py-8 shadow-2xl"
+              className="fixed right-0 top-0 z-50 h-screen w-[min(320px,80vw)] border-l border-white/10 bg-background px-6 py-8 shadow-2xl"
               initial={{ opacity: 0, x: 32, scale: 0.98 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 24, scale: 0.98 }}
               transition={{ type: "spring", duration: 0.5 }}
+              onClick={(e) => e.stopPropagation()}
+              onTouchStart={(e) => e.stopPropagation()}
             >
               <div className="mb-6 flex items-center justify-between">
                 <Image
@@ -194,7 +197,7 @@ export const Nav = () => {
                     return (
                       <div
                         key={link.label}
-                        className="flex items-center justify-between text-lg font-medium tracking-tight py-2 px-4 rounded-full opacity-75 cursor-not-allowed"
+                        className="flex items-center justify-between text-lg font-medium tracking-tight py-2 px-4 rounded-full opacity-75 cursor-not-allowed touch-none"
                       >
                         <span>{link.label}</span>
                         <span className="text-xs px-2 py-0.5 rounded-full bg-black/10 dark:bg-white/10 text-black/60 dark:text-white/60">
@@ -212,7 +215,8 @@ export const Nav = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setOpen(false)}
-                        className="flex items-center justify-between text-lg font-medium tracking-tight py-2 px-4 rounded-full transition hover:text-foreground/80 dark:hover:text-white/80 hover:bg-black/5 dark:hover:bg-white/5"
+                        onTouchEnd={() => setOpen(false)}
+                        className="flex items-center justify-between text-lg font-medium tracking-tight py-3 px-4 rounded-full transition hover:text-foreground/80 dark:hover:text-white/80 hover:bg-black/5 dark:hover:bg-white/5 active:bg-black/10 dark:active:bg-white/10 touch-manipulation"
                       >
                         <span>{link.label}</span>
                         <ArrowUpRight className="h-4 w-4" />
@@ -223,6 +227,26 @@ export const Nav = () => {
                   const handleClick = (
                     e: React.MouseEvent<HTMLAnchorElement>
                   ) => {
+                    e.stopPropagation();
+                    setOpen(false);
+                    if (link.href.startsWith("#")) {
+                      e.preventDefault();
+                      setTimeout(() => {
+                        const element = document.querySelector(link.href);
+                        if (element) {
+                          element.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                        }
+                      }, 100);
+                    }
+                  };
+
+                  const handleTouch = (
+                    e: React.TouchEvent<HTMLAnchorElement>
+                  ) => {
+                    e.stopPropagation();
                     setOpen(false);
                     if (link.href.startsWith("#")) {
                       e.preventDefault();
@@ -243,7 +267,8 @@ export const Nav = () => {
                       key={link.label}
                       href={link.href}
                       onClick={handleClick}
-                      className="flex items-center justify-between text-lg font-medium tracking-tight py-2 px-4 rounded-full transition hover:text-foreground/80 dark:hover:text-white/80 hover:bg-black/5 dark:hover:bg-white/5"
+                      onTouchEnd={handleTouch}
+                      className="flex items-center justify-between text-lg font-medium tracking-tight py-3 px-4 rounded-full transition hover:text-foreground/80 dark:hover:text-white/80 hover:bg-black/5 dark:hover:bg-white/5 active:bg-black/10 dark:active:bg-white/10 touch-manipulation"
                     >
                       <span>{link.label}</span>
                       {link.href.startsWith("#") ? null : (
@@ -255,10 +280,17 @@ export const Nav = () => {
               </div>
 
               <div className="mt-8">
-                <Link href="/" className="">
-                  <button className="text-white bg-emerald-600 text-md font-semibold tracking-tighter hover:bg-emerald-700 rounded-full px-5 py-2 transition-all duration-300 active">
-                    Get Started
-                  </button>
+                <Link
+                  href="https://discord.gg/C6EgkeEAed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  onTouchEnd={() => setOpen(false)}
+                  className="block"
+                >
+                  <GradientButton href="https://discord.gg/C6EgkeEAed">
+                    Join the discord
+                  </GradientButton>
                 </Link>
               </div>
             </motion.div>

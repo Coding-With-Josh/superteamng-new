@@ -71,7 +71,7 @@ export const metadata: Metadata = {
       "Where Nigerians learn, build, and earn by contributing to the Solana ecosystem. Locally rooted, globally connected, and execution-driven.",
     images: [
       {
-        url: "/logo-full.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "SuperteamNG - Building Nigeria's Solana Ecosystem",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     description:
       "Where Nigerians learn, build, and earn by contributing to the Solana ecosystem. Join the community today.",
     creator: "@SuperteamNG",
-    images: ["/logo-full.png"],
+    images: ["/og.png"],
   },
   robots: {
     index: true,

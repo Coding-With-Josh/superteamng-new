@@ -8,7 +8,7 @@ export const StructuredData = () => {
     description:
       "SuperteamNG is the Nigerian chapter of Superteam, a global network of builders working to grow the Solana ecosystem through real products, real contributions, and real earnings.",
     url: "https://superteamng-new.vercel.app",
-    logo: "https://superteamng-new.vercel.app/logo-full.png",
+    logo: "https://superteamng-new.vercel.app/og.png",
     sameAs: ["https://x.com/SuperteamNG", "https://discord.gg/C6EgkeEAed"],
     contactPoint: {
       "@type": "ContactPoint",
