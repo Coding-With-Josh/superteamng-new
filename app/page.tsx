@@ -4,6 +4,7 @@ import { GallerySection } from "@/components/sections/gallery-section";
 import { AboutSection } from "@/components/sections/about-section";
 import { FeaturesSection } from "@/components/sections/features-section";
 import { ProductsSection } from "@/components/sections/products-section";
+import { EarnSection } from "@/components/sections/earn-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { FAQSection } from "@/components/sections/faq-section";
 import { Footer } from "@/components/sections/footer";
@@ -20,6 +21,7 @@ export default function Home() {
       <AboutSection />
       <FeaturesSection />
       <ProductsSection />
+      <EarnSection />
       <TestimonialsSection />
       <FAQSection />
       <CtaSection />
