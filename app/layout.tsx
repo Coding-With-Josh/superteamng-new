@@ -117,6 +117,7 @@ export default function RootLayout({
       >
         <StructuredData />
         <LayoutProvider>{children}</LayoutProvider>
+        <Analytics />
       </body>
     </html>
   );
