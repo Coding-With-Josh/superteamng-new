@@ -162,7 +162,6 @@ export const Nav = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              onTouchStart={(e) => e.stopPropagation()}
             />
             <motion.div
               className="fixed right-0 top-0 z-50 h-screen w-[min(320px,80vw)] border-l border-white/10 bg-background px-6 py-8 shadow-2xl"

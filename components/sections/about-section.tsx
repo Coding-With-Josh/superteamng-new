@@ -3,15 +3,8 @@
 import React from "react";
 
 export const AboutSection = () => {
-  const guilds = [
-    "Developers",
-    "Designers",
-    "Writers",
-    "Content Creation",
-    "AI/DePIN",
-  ];
-
-  const hackathons = ["Renaissance", "Hyperdrive", "cHack", "Radar"];
+  // Adjusted according to prompt: only three core guilds
+  const guilds = ["Developers", "Designers", "Writers"];
 
   return (
     <section
@@ -39,60 +32,39 @@ export const AboutSection = () => {
 
           <div className="mx-auto max-w-3xl space-y-6 text-left">
             <p className="text-base text-white/70 leading-relaxed tracking-tight sm:text-lg">
-              Founded in June 2023, SuperteamNG has grown in both numbers and
-              strength. Formed by{" "}
-              <span className="font-medium text-white">
-                Nzube Ezudo
-              </span>{" "}
-              and{" "}
-              <span className="font-medium text-white">
-                Harrison Obiefule
-              </span>
-              , the core team has grown into{" "}
-              <span className="font-medium text-white">12</span>
-              .
+              Founded in June 2023, SuperteamNG has grown in both numbers and strength. Formed by{" "}
+              <span className="font-medium text-white">Nzube Ezube</span> and{" "}
+              <span className="font-medium text-white">Harrison Obiefule</span>,
             </p>
 
             <div className="rounded-xl border border-white/10 bg-white/5 p-6">
               <p className="text-base text-white/70 leading-relaxed tracking-tight sm:text-lg">
                 Over the past year, more than{" "}
-                <span className="font-medium text-white">
-                  80+ projects
-                </span>{" "}
-                have been built and submitted to both local and global
-                hackathons with some of the projects emerging as winners in{" "}
-                {hackathons.map((hackathon, i) => (
-                  <React.Fragment key={hackathon}>
-                    <span className="font-medium text-white">
-                      {hackathon}
-                    </span>
-                    {i < hackathons.length - 1 && ", "}
-                    {i === hackathons.length - 2 && " and "}
-                  </React.Fragment>
-                ))}{" "}
-                Hackathons.
+                <span className="font-medium text-white">60 projects</span>{" "}
+                have been built and submitted to both local and global hackathons with some of the projects emerging as winners in{" "}
+                <span className="font-medium text-white">Renaissance</span>,{" "}
+                <span className="font-medium text-white">Hyperdrive</span>, and{" "}
+                <span className="font-medium text-white">cHack</span>.
               </p>
             </div>
 
             <div>
               <p className="mb-4 text-base text-white/70 leading-relaxed tracking-tight sm:text-lg">
-                Our team is comprised of five core guilds:{" "}
-                {guilds.map((guild, i) => (
-                  <React.Fragment key={guild}>
-                    <span className="font-medium text-white">
-                      {guild}
-                    </span>
-                    {i < guilds.length - 1 && ", "}
-                    {i === guilds.length - 2 && " and "}
-                  </React.Fragment>
-                ))}
-                . Open to all who are eager to join, these groups provide unique
-                opportunities for collaboration and growth.
+                Our team is comprised of three core guilds:{" "}
+                <span className="font-medium text-white">Developers</span>,{" "}
+                <span className="font-medium text-white">Designers</span>, and{" "}
+                <span className="font-medium text-white">Writers</span>. Open to all who are eager to join, these groups provide unique opportunities for collaboration and growth.
+              </p>
+            </div>
+
+            <div>
+              <p className="mb-4 text-base text-white/70 leading-relaxed tracking-tight sm:text-lg">
+                We also host monthly ecosystem calls spanning across <span className="font-medium text-white">21 states</span> in Nigeria, fostering community engagement.
               </p>
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-5 sm:gap-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
             {guilds.map((guild, index) => {
               const colorClasses = [
                 {
@@ -109,16 +81,6 @@ export const AboutSection = () => {
                   dot: "bg-purple-400",
                   gradient: "from-purple-500/10 to-transparent",
                   border: "border-purple-400/20",
-                },
-                {
-                  dot: "bg-orange-400",
-                  gradient: "from-orange-500/10 to-transparent",
-                  border: "border-orange-400/20",
-                },
-                {
-                  dot: "bg-pink-400",
-                  gradient: "from-pink-500/10 to-transparent",
-                  border: "border-pink-400/20",
                 },
               ];
               const colors = colorClasses[index % colorClasses.length];

@@ -118,9 +118,11 @@ export const EarnSection = () => {
               <div key={opportunity.label} className="flex flex-col">
                 <div className="mb-2">
                   <span
-                    className={`${colorClasses[
-                      opportunity.color as keyof typeof colorClasses
-                    ]} text-xs tracking-wide`}
+                    className={`${
+                      colorClasses[
+                        opportunity.color as keyof typeof colorClasses
+                      ]
+                    } text-xs tracking-wide`}
                   >
                     {opportunity.label}
                   </span>

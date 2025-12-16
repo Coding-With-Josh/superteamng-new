@@ -90,7 +90,7 @@ export const FAQSection = () => {
                     <span className="font-mono text-neutral-500 text-sm transition-colors duration-200 group-hover:text-neutral-400">
                       ({faq.id})
                     </span>
-                    <h3 className="font-medium font-serif text-lg transition-colors duration-200 group-hover:text-neutral-200">
+                    <h3 className="font-medium font-serif text-lg transition-colors duration-200 group-hover:text-neutral-200 text-white">
                       {faq.question}
                     </h3>
                   </div>

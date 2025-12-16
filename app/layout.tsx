@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
@@ -119,12 +119,12 @@ export default function RootLayout({
         enableSystem={false}
         disableTransitionOnChange
       >
-      <body
-        className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-[#0a0a0a]`}
-      >
-        <StructuredData />
-        <LayoutProvider>{children}</LayoutProvider>
-      </body>
+        <body
+          className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-[#0a0a0a]`}
+        >
+          <StructuredData />
+          <LayoutProvider>{children}</LayoutProvider>
+        </body>
       </ThemeProvider>
     </html>
   );

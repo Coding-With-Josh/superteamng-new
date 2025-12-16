@@ -3,47 +3,72 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Icon } from "@iconify/react";
 
 export const ProductsSection = () => {
+  // Mirrored from product.superteamng.fun (Nectarfi, Chatter, Paj Cash, Bread) plus Zypp Protocol
   const products = [
     {
       id: 1,
-      name: "FundusAI",
+      name: "Zypp Protocol",
+      category: "DeFi",
       description:
-        "An artificial intelligence diagnostic device for Diabetic Retinopathy, to diagnose more patients accurately and efficiently across Africa.",
-      badge: "CHack Top Project",
-      logo: "/community/1.png", // You can replace with actual project logos
-      link: "#",
+        "Send crypto offline! The payment engine for offline Solana transactions.",
+      logo: "/product/zypp.png",
+      // buildersLabel: "100+",
+      link: "https://zypp.fun",
+      xUrl: "https://x.com/use_zypp",
+      siteUrl: "https://zypp.fun",
     },
     {
       id: 2,
-      name: "Clusttr",
-      description:
-        "Democratising real estate investment through fractional ownership and easy access to liquidity. Making property investment accessible to everyone.",
-      badge: "Hyperdrive Winner",
-      logo: "/community/2.png",
-      link: "#",
+      name: "Chatter",
+      category: "DeFi",
+      description: "Stablecoin payments in your DMs.",
+      logo: "/product/chatter.png",
+      // buildersLabel: "600+",
+      link: "https://product.superteamng.fun/product/iuvV6XvCyzpJ7qStYplu",
+      xUrl: "https://x.com/usechatter",
+      siteUrl: "https://usechatter.com",
     },
     {
       id: 3,
-      name: "BlockRide",
+      name: "Paj Cash",
+      category: "DeFi",
       description:
-        "Blockride transforms fractional bus fleets ownership into real and reliable crypto assets, democratizing access to vehicle ownership.",
-      badge: "Hyperdrive Mention",
-      logo: "/community/3.png",
-      link: "#",
+        "Simplified crypto off‑ramping for everyone. Convert your crypto to fiat directly from your favorite wallet.",
+      logo: "/product/pajcash.png",
+      // buildersLabel: "900+",
+      link: "https://product.superteamng.fun/product/DAU72ztbvBeoVEcOx2ML",
+      xUrl: "https://x.com/paj_cash",
+      siteUrl: "https://paj.cash",
     },
     {
       id: 4,
-      name: "Mynt",
+      name: "Bread",
+      category: "DeFi",
       description:
-        "Mynt allows businesses to mint NFTs with custom conditions and smart contract integration, simplifying digital asset creation.",
-      badge: "Renaissance Winner",
-      logo: "/community/4.png",
-      link: "#",
+        "Transfer any crypto to your African bank account — no apps, no KYC, just send and receive.",
+      logo: "/product/bread.png",
+      // buildersLabel: "1–100+",
+      link: "https://product.superteamng.fun/product/5X9vlLqDdPJSCgOQBql0",
+      xUrl: "https://x.com/use_bread",
+      siteUrl: "https://bread.africa",
+    },
+    {
+      id: 5,
+      name: "Airbills",
+      category: "Stablecoins · PayFi",
+      description:
+        "A utility platform for paying bills and booking flights with stablecoins.",
+      logo: "/product/airbills.png",
+      // buildersLabel: "101–1k+",
+      link: "https://product.superteamng.fun/product/w9m8EQuQj4eAOe3Bh408",
+      xUrl: "https://x.com/airbillspay",
+      siteUrl: "https://app.airbillspay.com/",
     },
   ];
-
+// 
   return (
     <section
       className="relative mx-2 mb-4 overflow-hidden rounded-xl bg-black py-16 sm:mx-4 sm:py-24"
@@ -83,34 +108,61 @@ export const ProductsSection = () => {
             {products.map((product) => (
               <div
                 key={product.id}
-                className="group flex min-w-[320px] flex-col rounded-xl border border-white/10 bg-black/60 transition-all hover:border-white/20 hover:shadow-lg sm:min-w-[360px]"
+                className="group flex min-w-[320px] flex-col rounded-3xl border border-white/10 bg-black/60 transition-all hover:border-emerald-500/40 hover:shadow-2xl sm:min-w-[360px]"
               >
-                {/* Logo/Image Area */}
-                <div className="relative h-48 w-full overflow-hidden rounded-t-xl bg-zinc-900">
-                  <div className="flex h-full w-full items-center justify-center p-6">
-                    <div className="relative h-24 w-24 overflow-hidden rounded-lg">
-                      <Image
-                        src={product.logo}
-                        alt={`${product.name} logo`}
-                        fill
-                        className="object-cover"
-                        sizes="96px"
-                      />
-                    </div>
-                  </div>
+                {/* Hero Image Area */}
+                <div className="relative h-56 w-full overflow-hidden rounded-3xl">
+                  <Image
+                    src={product.logo}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    priority={product.id === 1}
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col px-5 pb 6 pt-5 sm:px-6 sm:pb-6 sm:pt-6">
                   <div className="mb-3 flex items-start justify-between gap-3">
-                    <h3 className="font-medium text-xl font-serif tracking-tight text-white sm:text-2xl">
-                      {product.name}
-                    </h3>
-                    {product.badge && (
-                      <span className="whitespace-nowrap rounded-full bg-purple-500 px-3 py-1 text-xs font-medium tracking-tight text-white">
-                        {product.badge}
-                      </span>
-                    )}
+                    <div>
+                      <h3 className="font-medium text-xl font-serif tracking-tight text-white sm:text-2xl">
+                        {product.name}
+                      </h3>
+                      {product.category && (
+                        <span className="mt-2 inline-flex whitespace-nowrap rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-medium tracking-tight text-emerald-300">
+                          {product.category}
+                        </span>
+                      )}
+                    </div>
+
+                    {(product as any).xUrl || (product as any).siteUrl ? (
+                      <div className="flex items-center gap-2 text-white/50">
+                        {(product as any).xUrl && (
+                          <Link
+                            href={(product as any).xUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${product.name} on X`}
+                            className="transition-colors hover:text-white"
+                          >
+                            <Icon icon="simple-icons:x" className="h-4 w-4" />
+                          </Link>
+                        )}
+                        {(product as any).siteUrl && (
+                          <Link
+                            href={(product as any).siteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`${product.name} website`}
+                            className="transition-colors hover:text-white"
+                          >
+                            <Icon icon="ph:globe-bold" className="h-4 w-4" />
+                          </Link>
+                        )}
+                      </div>
+                    ) : null}
                   </div>
 
                   <p className="mb-4 flex-1 text-sm text-white/70 leading-relaxed tracking-tight sm:text-base">

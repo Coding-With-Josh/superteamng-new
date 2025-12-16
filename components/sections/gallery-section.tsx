@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const GallerySection = () => {
-  const images = [1, 2, 3, 4, 5, 6, 7, 8].map((i) => `/community/${i}.png`);
+  const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((i) => `/community/${i}.png`);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

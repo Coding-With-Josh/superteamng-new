@@ -26,24 +26,19 @@ export const Footer = () => {
             </p>
           </div>
 
-          <div className="max-w-xs flex-shrink-0 space-y-4">
+          <div className="max-w-xs shrink-0 space-y-4">
             <h3 className="font-medium text-white text-sm tracking-tighter">Get in touch</h3>
             <p className="text-white/60 text-sm tracking-tighter">
               Join us on our journey to build the Solana ecosystem in Africa.
             </p>
             <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
               <div className="flex gap-2">
-                <input
-                  type="email"
-                  className="flex w-full border py-1 shadow-sm transition-colors h-10 flex-1 rounded-lg border-white/10 bg-black/5 backdrop-blur-sm px-4 text-sm tracking-tighter placeholder:text-white/40 focus:border-white focus:ring-1 focus:ring-white"
-                  placeholder="Enter your email"
-                  required
-                  name="email"
-                />
-                <button
-                  className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium shadow-sm group h-10 w-10 rounded-lg bg-white p-0 text-black transition-all duration-300 hover:bg-white/90"
+                <Link
+                  href="https://superteamnigeria.substack.com/subscribe"
+                  className="inline-flex items-center justify-center w-full gap-2 whitespace-nowrap text-sm font-medium shadow-sm group h-10 w-10 rounded-lg bg-white p-0 text-black transition-all duration-300 hover:bg-white/90"
                   type="submit"
                 >
+                  Subscribe to the Substack
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -54,12 +49,12 @@ export const Footer = () => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="lucide lucide-arrow-right h-4 w-4 transition-transform group-hover:translate-x-1"
+                    className="lucide lucide-arrow-right h-4 w-4 transition-transform group-hover:translate-x-1 -rotate-45"
                   >
                     <path d="M5 12h14"></path>
                     <path d="m12 5 7 7-7 7"></path>
                   </svg>
-                </button>
+                </Link>
               </div>
               <p className="text-white/40 text-xs tracking-tighter">
                 We&apos;ll send you updates about our projects and events.
