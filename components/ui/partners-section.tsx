@@ -10,6 +10,7 @@ const partnerLogos = [
   "solflare.jpeg",
   "jupiter.jpg",
   "meteora.jpeg",
+  "quicknode.png",
   "legends.jpg",
   "niya.jpg",
   "surfpool.jpeg",
@@ -24,6 +25,7 @@ const altTexts: Record<string, string> = {
   "solflare.jpeg": "Solflare",
   "jupiter.jpeg": "Jupiter",
   "metora.jpeg": "Metora",
+  "quicknode.png": "Quicknode",
   "legends.jpg": "Legends",
   "niya.jpg": "Niya",
   "surfpool.jpeg": "Surfpool",
@@ -48,7 +50,8 @@ export const PartnersSection = () => {
         className="pointer-events-none absolute inset-0 z-0"
         aria-hidden="true"
       >
-        <div className="absolute left-1/2 top-1/2 h-125 w-250 -translate-x-1/2 -translate-y-1/2 rounded-full bg-linear-to-r from-emerald-500/5 via-emerald-400/8 to-green-500/5 blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-125 w-250 -translate-x-1/2 -translate-y-1/2 rounded-full bg-linear-to-r from-emerald-500/5 via-emerald-400/8 to-green-500/5 blur-3xl hidden lg:hidden" />
+        <div className="absolute left-1/2 top-1/2 h-75 w-130 -translate-x-1/2 -translate-y-1/2 rounded-full bg-linear-to-r from-emerald-500/5 via-emerald-400/8 to-green-500/5 blur-3xl block md:hidden" />
       </div>
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-8">
         <div className="mb-16 text-center">

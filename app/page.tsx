@@ -19,12 +19,12 @@ export default function Home() {
       <HeroSection />
       <GallerySection />
       <Metrics />
-      <PartnersSection />
       <AboutSection />
       <FeaturesSection />
       <ProductsSection />
       <EarnSection />
       <TestimonialsSection />
+      <PartnersSection />
       <FAQSection />
       <CtaSection />
       <Footer />
