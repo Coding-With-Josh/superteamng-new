@@ -67,7 +67,7 @@ export const PartnersSection = () => {
         <div className="relative h-40 sm:h-44 flex items-center overflow-hidden">
           <Marquee
             pauseOnHover
-            speed={35}
+            speed={100}
             gradient={true}
             gradientWidth={80}
             gradientColor="#000000"
