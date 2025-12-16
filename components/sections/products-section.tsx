@@ -11,7 +11,7 @@ export const ProductsSection = () => {
     {
       id: 1,
       name: "Zypp Protocol",
-      category: "DePin | DropFi",
+      category: "DePin",
       description:
         "Send crypto offline! The payment engine for offline Solana transactions.",
       logo: "/product/zypp.png",
@@ -45,18 +45,6 @@ export const ProductsSection = () => {
     },
     {
       id: 4,
-      name: "Bread",
-      category: "DeFi",
-      description:
-        "Transfer any crypto to your African bank account — no apps, no KYC, just send and receive.",
-      logo: "/product/bread.png",
-      // buildersLabel: "1–100+",
-      link: "https://product.superteamng.fun/product/5X9vlLqDdPJSCgOQBql0",
-      xUrl: "https://x.com/use_bread",
-      siteUrl: "https://bread.africa",
-    },
-    {
-      id: 5,
       name: "Airbills",
       category: "Stablecoins | PayFi",
       description:
@@ -193,6 +181,48 @@ export const ProductsSection = () => {
                 </div>
               </div>
             ))}
+             <div
+               key="view-more-widget"
+               className="group flex min-w-[320px] flex-col items-center justify-center rounded-3xl border-2 border-dashed border-emerald-500/60 bg-gradient-to-br from-black/70 to-emerald-950/70 hover:shadow-2xl transition-all hover:border-emerald-400/70 sm:min-w-[360px] cursor-pointer select-none p-8"
+             >
+               <div className="flex flex-col items-center text-center space-y-4 py-6">
+                 {/* Eye-catching animated icon */}
+                 <div className="relative">
+                   <span className="flex h-16 w-16 text-4xl font-bold text-emerald-400 items-center justify-center rounded-full bg-emerald-500/10 shadow-inner ring-2 ring-emerald-400 group-hover:bg-emerald-400/20 transition-all animate-pulse">
+                    ?
+                   </span>
+                   {/* <span className="pointer-events-none absolute -bottom-3 left-1/2 -translate-x-1/2 animate-bounce text-emerald-400 text-xs font-semibold">View More</span> */}
+                 </div>
+                 <h3 className="text-2xl font-semibold tracking-tight text-emerald-200 font-serif">
+                   Discover More Products
+                 </h3>
+                 <p className="text-white/70 text-base max-w-xs">
+                   Seeing something you like? Tap below to explore the full collection!
+                 </p>
+               </div>
+               <Link
+                 href="/products"
+                 className="mt-4 inline-flex items-center gap-2 rounded-full bg-emerald-500/90 px-6 py-2 text-base font-semibold text-black shadow-lg ring-emerald-500/10 ring-2 hover:bg-emerald-400 hover:text-white transition-all group-hover:scale-105 group-active:scale-95"
+                 aria-label="View all products"
+               >
+                 View More
+                 <svg
+                   xmlns="http://www.w3.org/2000/svg"
+                   width="18"
+                   height="18"
+                   viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   strokeWidth="2"
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   className="ml-1 lucide lucide-arrow-right"
+                 >
+                   <path d="M5 12h14"></path>
+                   <path d="M12 5l7 7-7 7"></path>
+                 </svg>
+               </Link>
+             </div>
           </div>
         </div>
       </div>

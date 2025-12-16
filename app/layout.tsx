@@ -112,20 +112,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider
-        attribute="class"
-        defaultTheme="dark"
-        enableSystem={false}
-        disableTransitionOnChange
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-[#0a0a0a]`}
+        suppressHydrationWarning
       >
-        <body
-          className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-[#0a0a0a]`}
-        >
+        {/* <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        > */}
           <StructuredData />
           <LayoutProvider>{children}</LayoutProvider>
-        </body>
-      </ThemeProvider>
+        {/* </ThemeProvider> */}
+      </body>
     </html>
   );
 }

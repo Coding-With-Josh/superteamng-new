@@ -10,6 +10,7 @@ import { FAQSection } from "@/components/sections/faq-section";
 import { Footer } from "@/components/sections/footer";
 import { CtaSection } from "@/components/sections/cta";
 import { Metrics } from "@/components/sections/metrics";
+import PartnersSection from "@/components/ui/partners-section";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HeroSection />
       <GallerySection />
       <Metrics />
+      <PartnersSection />
       <AboutSection />
       <FeaturesSection />
       <ProductsSection />

@@ -38,7 +38,7 @@ export const Footer = () => {
                   className="inline-flex items-center justify-center w-full gap-2 whitespace-nowrap text-sm font-medium shadow-sm group h-10 w-10 rounded-lg bg-white p-0 text-black transition-all duration-300 hover:bg-white/90"
                   type="submit"
                 >
-                  Subscribe to the Substack
+                  Subscribe to our Substack
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

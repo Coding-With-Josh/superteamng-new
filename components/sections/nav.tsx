@@ -196,7 +196,7 @@ export const Nav = () => {
                     return (
                       <div
                         key={link.label}
-                        className="flex items-center justify-between text-lg font-medium tracking-tight py-2 px-4 rounded-full opacity-75 cursor-not-allowed touch-none"
+                        className="flex items-center justify-between text-white text-lg font-medium tracking-tight py-2 px-4 rounded-full opacity-75 cursor-not-allowed touch-none"
                       >
                         <span>{link.label}</span>
                         <span className="text-xs px-2 py-0.5 rounded-full bg-white/10 text-white/60">
@@ -215,7 +215,7 @@ export const Nav = () => {
                         rel="noopener noreferrer"
                         onClick={() => setOpen(false)}
                         onTouchEnd={() => setOpen(false)}
-                        className="flex items-center justify-between text-lg font-medium tracking-tight py-3 px-4 rounded-full transition hover:text-white/80 hover:bg-white/5 active:bg-white/10 touch-manipulation"
+                        className="flex items-center justify-between text-lg font-medium tracking-tight py-3 px-4 rounded-full transition text-white hover:text-white/80 hover:bg-white/5 active:bg-white/10 touch-manipulation"
                       >
                         <span>{link.label}</span>
                         <ArrowUpRight className="h-4 w-4" />
@@ -267,7 +267,7 @@ export const Nav = () => {
                       href={link.href}
                       onClick={handleClick}
                       onTouchEnd={handleTouch}
-                      className="flex items-center justify-between text-lg font-medium tracking-tight py-3 px-4 rounded-full transition hover:text-foreground/80 dark:hover:text-white/80 hover:bg-black/5 dark:hover:bg-white/5 active:bg-black/10 dark:active:bg-white/10 touch-manipulation"
+                      className="flex items-center justify-between text-lg font-medium tracking-tight py-3 px-4 rounded-full transition hover:text-foreground/80 text-white dark:hover:text-white/80 hover:bg-black/5 dark:hover:bg-white/5 active:bg-black/10 dark:active:bg-white/10 touch-manipulation"
                     >
                       <span>{link.label}</span>
                       {link.href.startsWith("#") ? null : (
