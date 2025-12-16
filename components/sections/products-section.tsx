@@ -11,7 +11,7 @@ export const ProductsSection = () => {
     {
       id: 1,
       name: "Zypp Protocol",
-      category: "DeFi",
+      category: "DePin | DropFi",
       description:
         "Send crypto offline! The payment engine for offline Solana transactions.",
       logo: "/product/zypp.png",
@@ -58,7 +58,7 @@ export const ProductsSection = () => {
     {
       id: 5,
       name: "Airbills",
-      category: "Stablecoins · PayFi",
+      category: "Stablecoins | PayFi",
       description:
         "A utility platform for paying bills and booking flights with stablecoins.",
       logo: "/product/airbills.png",
@@ -120,7 +120,7 @@ export const ProductsSection = () => {
                     sizes="(max-width: 768px) 100vw, 400px"
                     priority={product.id === 1}
                   />
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
                 </div>
 
                 {/* Content */}
