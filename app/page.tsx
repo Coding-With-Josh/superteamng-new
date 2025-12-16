@@ -13,7 +13,7 @@ import { Metrics } from "@/components/sections/metrics";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden scroll-smooth pt-14">
+    <main className="relative min-h-screen w-full overflow-hidden bg-[#0a0a0a] scroll-smooth pt-14">
       <Nav />
       <HeroSection />
       <GallerySection />

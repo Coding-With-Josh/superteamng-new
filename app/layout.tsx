@@ -4,6 +4,7 @@ import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { LayoutProvider } from "@/providers/LayoutProviders";
 import { StructuredData } from "@/components/seo/structured-data";
+import { ThemeProvider } from "next-themes";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -112,12 +113,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="dark"
+        enableSystem={false}
+        disableTransitionOnChange
+      >
       <body
-        className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased`}
+        className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-[#0a0a0a]`}
       >
         <StructuredData />
         <LayoutProvider>{children}</LayoutProvider>
       </body>
+      </ThemeProvider>
     </html>
   );
 }

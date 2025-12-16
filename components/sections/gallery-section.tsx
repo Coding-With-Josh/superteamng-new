@@ -18,7 +18,7 @@ export const GallerySection = () => {
 
   return (
     <section
-      className="relative mb-4 flex min-h-[70vh] items-center justify-center overflow-hidden rounded-xl bg-white py-16 sm:mx-4 sm:py-24 dark:bg-black"
+      className="relative mb-4 flex min-h-[70vh] items-center justify-center overflow-hidden rounded-xl py-16 sm:mx-4 sm:py-24 bg-black"
       id="gallery"
     >
       <div className="relative min-h-[70vh] w-full flex items-center justify-center">

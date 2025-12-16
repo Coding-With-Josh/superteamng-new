@@ -17,27 +17,27 @@ export const TestimonialsSection = () => {
 
   return (
     <section
-      className="relative mx-2 mb-4 overflow-hidden rounded-xl bg-white py-16 sm:mx-4 sm:py-24 dark:bg-black"
+      className="relative mx-2 mb-4 overflow-hidden rounded-xl bg-black py-16 sm:mx-4 sm:py-24"
       id="testimonials"
     >
-      <div className="absolute inset-0 bg-linear-to-b from-black/2 to-transparent dark:from-white/2"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-white/2 to-transparent"></div>
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex justify-center">
           <div className="flex items-center gap-2">
-            <div className="h-4 w-4 rounded-full bg-black dark:bg-white"></div>
-            <div className="h-px w-4 bg-black dark:bg-white"></div>
+            <div className="h-4 w-4 rounded-full bg-white"></div>
+            <div className="h-px w-4 bg-white"></div>
             <div className="flex gap-1">
-              <div className="h-2 w-2 rounded-full bg-black dark:bg-white"></div>
-              <div className="h-2 w-2 rounded-full bg-black dark:bg-white"></div>
+              <div className="h-2 w-2 rounded-full bg-white"></div>
+              <div className="h-2 w-2 rounded-full bg-white"></div>
             </div>
           </div>
         </div>
 
         <div className="mb-12 text-center">
-          <h2 className="mb-4 font-medium text-4xl font-serif text-black tracking-tight sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
+          <h2 className="mb-4 font-medium text-4xl font-serif tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             What our <span className="text-emerald-500">community</span> says
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-black/70 tracking-tight sm:text-lg dark:text-white/70">
+          <p className="mx-auto max-w-2xl text-base tracking-tight text-white/70 sm:text-lg">
             Real feedback from builders, developers, and creators in the
             SuperteamNG ecosystem.
           </p>
@@ -53,7 +53,7 @@ export const TestimonialsSection = () => {
               <ClientTweetCard
                 id={tweetId}
                 className={cn(
-                  "h-full border-black/10 bg-white/80 backdrop-blur-md transition-all hover:border-black/20 hover:shadow-xl dark:border-white/10 dark:bg-black/60",
+                  "h-full border-white/10 bg-black/60 backdrop-blur-md transition-all hover:border-white/20 hover:shadow-xl",
                   index % 3 === 0 && "border-emerald-500/20",
                   index % 3 === 1 && "border-blue-500/20",
                   index % 3 === 2 && "border-purple-500/20"
@@ -71,7 +71,7 @@ export const TestimonialsSection = () => {
                 <ClientTweetCard
                   id={tweetId}
                   className={cn(
-                    "h-full border-black/10 bg-white/80 backdrop-blur-md transition-all hover:border-black/20 hover:shadow-xl dark:border-white/10 dark:bg-black/60",
+                    "h-full border-white/10 bg-black/60 backdrop-blur-md transition-all hover:border-white/20 hover:shadow-xl",
                     index % 3 === 0 && "border-emerald-500/20",
                     index % 3 === 1 && "border-blue-500/20",
                     index % 3 === 2 && "border-purple-500/20"

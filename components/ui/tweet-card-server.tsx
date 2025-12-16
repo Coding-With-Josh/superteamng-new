@@ -9,6 +9,8 @@ interface TwitterIconProps {
   className?: string
   [key: string]: unknown
 }
+
+// Keep Twitter icon unchanged (inheriting text color)
 const Twitter = ({ className, ...props }: TwitterIconProps) => (
   <svg
     stroke="currentColor"
@@ -46,15 +48,17 @@ export const truncate = (str: string | null, length: number) => {
   return `${str.slice(0, length - 3)}...`
 }
 
+// Change skeleton (loading shimmer) to be dark gray
 const Skeleton = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={cn("bg-primary/10 rounded-md", className)} {...props} />
+    <div className={cn("bg-gray-800 rounded-md", className)} {...props} />
   )
 }
 
+// Make all skeletons have a dark background and border
 export const TweetSkeleton = ({
   className,
   ...props
@@ -64,7 +68,7 @@ export const TweetSkeleton = ({
 }) => (
   <div
     className={cn(
-      "flex size-full max-h-max min-w-72 flex-col gap-2 rounded-lg border p-4",
+      "flex size-full max-h-max min-w-72 flex-col gap-2 rounded-lg border border-neutral-700 bg-neutral-950 p-4",
       className
     )}
     {...props}
@@ -77,6 +81,7 @@ export const TweetSkeleton = ({
   </div>
 )
 
+// NotFound state: dark bg and border
 export const TweetNotFound = ({
   className,
   ...props
@@ -86,7 +91,7 @@ export const TweetNotFound = ({
 }) => (
   <div
     className={cn(
-      "flex size-full flex-col items-center justify-center gap-2 rounded-lg border p-4",
+      "flex size-full flex-col items-center justify-center gap-2 rounded-lg border border-neutral-700 bg-neutral-950 p-4 text-neutral-200",
       className
     )}
     {...props}
@@ -95,6 +100,7 @@ export const TweetNotFound = ({
   </div>
 )
 
+// Header: always dark text and background, border colors dark
 export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="flex flex-row justify-between tracking-tight">
     <div className="flex items-center space-x-2">
@@ -105,7 +111,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
           height={48}
           width={48}
           src={tweet.user.profile_image_url_https}
-          className="overflow-hidden rounded-full border border-transparent"
+          className="overflow-hidden rounded-full border border-neutral-700"
         />
       </a>
       <div>
@@ -113,12 +119,12 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
           href={tweet.user.url}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center font-semibold whitespace-nowrap"
+          className="flex items-center font-semibold whitespace-nowrap text-gray-100"
         >
           {truncate(tweet.user.name, 20)}
           {tweet.user.verified ||
             (tweet.user.is_blue_verified && (
-              <Verified className="ml-1 inline size-4 text-blue-500" />
+              <Verified className="ml-1 inline size-4 text-blue-400" />
             ))}
         </a>
         <div className="flex items-center space-x-1">
@@ -126,7 +132,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
             href={tweet.user.url}
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-gray-500 transition-all duration-75"
+            className="text-sm text-gray-400 transition-all duration-75"
           >
             @{truncate(tweet.user.screen_name, 16)}
           </a>
@@ -140,6 +146,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
   </div>
 )
 
+// Body: text is always gray-100, links are blue-400, muted types are gray-400
 export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="leading-normal tracking-tighter break-words">
     {tweet.entities.map((entity, idx) => {
@@ -154,7 +161,7 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
               href={entity.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-normal text-gray-500"
+              className="text-sm font-normal text-blue-400 hover:underline"
             >
               <span>{entity.text}</span>
             </a>
@@ -163,7 +170,7 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
           return (
             <span
               key={idx}
-              className="text-sm font-normal"
+              className="text-sm font-normal text-gray-100"
               dangerouslySetInnerHTML={{ __html: entity.text }}
             />
           )
@@ -172,6 +179,7 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
   </div>
 )
 
+// Media: media area uses border-gray-700 and dark backgrounds, images are not brightened
 export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
   if (!tweet.video && !tweet.photos) return null
   return (
@@ -183,7 +191,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
           loop
           muted
           playsInline
-          className="rounded-xl border shadow-sm"
+          className="rounded-xl border border-gray-700 shadow-sm bg-black"
         >
           <source src={tweet.video.variants[0].src} type="video/mp4" />
           Your browser does not support the video tag.
@@ -200,7 +208,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
               height={photo.height}
               title={"Photo by " + tweet.user.name}
               alt={tweet.text}
-              className="h-64 w-5/6 shrink-0 snap-center snap-always rounded-xl border object-cover shadow-sm"
+              className="h-64 w-5/6 shrink-0 snap-center snap-always rounded-xl border border-gray-700 object-cover shadow-sm bg-gray-900"
             />
           ))}
           <div className="shrink-0 snap-center sm:w-2" />
@@ -215,7 +223,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
               // @ts-expect-error package doesn't have type definitions
               tweet.card.binding_values.thumbnail_image_large.image_value.url
             }
-            className="h-64 rounded-xl border object-cover shadow-sm"
+            className="h-64 rounded-xl border border-gray-700 object-cover shadow-sm bg-neutral-900"
             alt={tweet.text}
           />
         )}
@@ -223,6 +231,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
   )
 }
 
+// Main tweet card: border and bg are always dark, text always light, NO light mode
 export const MagicTweet = ({
   tweet,
   className,
@@ -235,7 +244,7 @@ export const MagicTweet = ({
   return (
     <div
       className={cn(
-        "relative flex h-fit w-full max-w-lg flex-col gap-2 overflow-hidden rounded-lg border p-4 backdrop-blur-md",
+        "relative flex h-fit w-full max-w-lg flex-col gap-2 overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-950 p-4 backdrop-blur-md text-neutral-100",
         className
       )}
       {...props}
@@ -249,6 +258,7 @@ export const MagicTweet = ({
 
 /**
  * TweetCard (Server Side Only)
+ * Strictly dark mode version.
  */
 export const TweetCard = async ({
   id,

@@ -41,32 +41,31 @@ const faqs = [
   },
 ];
 
-
 export const FAQSection = () => {
   const [openId, setOpenId] = useState<string | null>("001");
 
   return (
     <section
-      className="relative mx-2 mb-4 min-h-screen overflow-hidden rounded-xl bg-white py-20 sm:mx-4 sm:py-32 dark:bg-black"
+      className="relative mx-2 mb-4 min-h-screen overflow-hidden rounded-xl bg-black py-20 sm:mx-4 sm:py-32"
       id="faq"
     >
-      <div className="absolute inset-0 bg-linear-to-b from-black/2 to-transparent dark:from-white/2"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-white/2 to-transparent"></div>
       <div className="container relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex justify-center">
           <div className="flex justify-center">
-            <div className="inline-flex items-center text-black/70 text-md tracking-tighter dark:text-white/70">
+            <div className="inline-flex items-center text-white/70 text-md tracking-tighter">
               FAQ
             </div>
           </div>
         </div>
 
         <div className="mb-16 space-y-4 text-center">
-          <h2 className="font-medium text-4xl text-black tracking-tighter font-serif sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
+          <h2 className="font-medium text-4xl text-white tracking-tighter font-serif sm:text-5xl md:text-6xl lg:text-7xl">
             Frequently asked <span className="text-emerald-500">questions</span>
           </h2>
-          <p className="mx-auto max-w-xl text-black/60 text-sm tracking-tighter sm:text-base dark:text-white/60">
+          <p className="mx-auto max-w-xl text-white/60 text-sm tracking-tighter sm:text-base">
             Can&apos;t find the answer you&apos;re looking for?{" "}
-            <a className="text-black hover:underline dark:text-white" href="#contact">
+            <a className="text-white hover:underline" href="#contact">
               Get in touch
             </a>
             .
@@ -79,7 +78,7 @@ export const FAQSection = () => {
             return (
               <div
                 key={faq.id}
-                className="group relative border-neutral-200 border-t dark:border-neutral-800"
+                className="group relative border-neutral-800 border-t"
               >
                 <button
                   aria-label={isOpen ? "Show less" : "Show more"}
@@ -88,10 +87,10 @@ export const FAQSection = () => {
                   onClick={() => setOpenId(isOpen ? null : faq.id)}
                 >
                   <div className="flex items-center gap-6">
-                    <span className="font-mono text-neutral-400 text-sm transition-colors duration-200 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+                    <span className="font-mono text-neutral-500 text-sm transition-colors duration-200 group-hover:text-neutral-400">
                       ({faq.id})
                     </span>
-                    <h3 className="font-medium font-serif text-lg transition-colors duration-200 group-hover:text-neutral-700 dark:group-hover:text-neutral-200">
+                    <h3 className="font-medium font-serif text-lg transition-colors duration-200 group-hover:text-neutral-200">
                       {faq.question}
                     </h3>
                   </div>
@@ -107,7 +106,7 @@ export const FAQSection = () => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="lucide lucide-minus h-5 w-5 text-neutral-400 transition-colors duration-200 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400"
+                        className="lucide lucide-minus h-5 w-5 text-neutral-500 transition-colors duration-200 group-hover:text-neutral-400"
                       >
                         <path d="M5 12h14"></path>
                       </svg>
@@ -122,7 +121,7 @@ export const FAQSection = () => {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="lucide lucide-plus h-5 w-5 text-neutral-400 transition-colors duration-200 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400"
+                        className="lucide lucide-plus h-5 w-5 text-neutral-500 transition-colors duration-200 group-hover:text-neutral-400"
                       >
                         <path d="M5 12h14"></path>
                         <path d="M12 5v14"></path>
@@ -135,7 +134,7 @@ export const FAQSection = () => {
                     <div className="pb-8">
                       <div className="flex flex-col gap-8 lg:flex-row lg:justify-between">
                         <div className="max-w-xl space-y-4">
-                          <p className="text-neutral-600 dark:text-neutral-400" style={{ opacity: 1 }}>
+                          <p className="text-neutral-400" style={{ opacity: 1 }}>
                             {faq.answer}
                           </p>
                         </div>
