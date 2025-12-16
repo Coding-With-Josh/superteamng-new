@@ -9,7 +9,7 @@ import { GradientButton } from "../ui/gradient-button";
 
 const navLinks = [
   { href: "/", label: "Home", type: "internal" },
-  { href: "#about", label: "About us", type: "internal" },
+  { href: "#about", label: "About", type: "internal" },
   { href: "#features", label: "Features", type: "internal" },
   { href: "#testimonials", label: "Testimonials", type: "internal" },
   { href: "#faq", label: "FAQ", type: "internal" },
