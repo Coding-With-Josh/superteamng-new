@@ -5,7 +5,13 @@ import { cn } from "@/lib/utils";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
+  variant?:
+    | "default"
+    | "destructive"
+    | "outline"
+    | "secondary"
+    | "ghost"
+    | "link";
   size?: "default" | "sm" | "lg" | "icon";
 }
 
@@ -17,11 +23,9 @@ const buttonVariants = {
   outline:
     "border border-input bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground",
   secondary:
-    "bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
-  ghost:
-    "bg-transparent hover:bg-gray-100 dark:hover:bg-gray-800",
-  link:
-    "bg-transparent underline-offset-4 hover:underline text-black dark:text-white hover:bg-transparent",
+    "bg-neutral-100 text-neutral-900 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700",
+  ghost: "bg-transparent hover:bg-neutral-100 dark:hover:bg-neutral-800",
+  link: "bg-transparent underline-offset-4 hover:underline text-black dark:text-white hover:bg-transparent",
 };
 
 const buttonSizes = {

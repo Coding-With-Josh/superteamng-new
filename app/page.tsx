@@ -10,10 +10,11 @@ import { FAQSection } from "@/components/sections/faq-section";
 import { Footer } from "@/components/sections/footer";
 import { CtaSection } from "@/components/sections/cta";
 import { Metrics } from "@/components/sections/metrics";
+import PartnersSection from "@/components/ui/partners-section";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full overflow-hidden scroll-smooth pt-14">
+    <main className="relative min-h-screen w-full overflow-hidden bg-[#0a0a0a] scroll-smooth pt-14">
       <Nav />
       <HeroSection />
       <GallerySection />
@@ -23,6 +24,7 @@ export default function Home() {
       <ProductsSection />
       <EarnSection />
       <TestimonialsSection />
+      <PartnersSection />
       <FAQSection />
       <CtaSection />
       <Footer />

@@ -1,9 +1,10 @@
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { LayoutProvider } from "@/providers/LayoutProviders";
 import { StructuredData } from "@/components/seo/structured-data";
+import { ThemeProvider } from "next-themes";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -111,13 +112,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased`}
+        className={`${instrumentSans.variable} ${instrumentSerif.variable} antialiased bg-[#0a0a0a]`}
+        suppressHydrationWarning
       >
-        <StructuredData />
-        <LayoutProvider>{children}</LayoutProvider>
-        <Analytics />
+        {/* <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        > */}
+          <StructuredData />
+          <LayoutProvider>{children}</LayoutProvider>
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

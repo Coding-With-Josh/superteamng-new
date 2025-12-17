@@ -3,28 +3,27 @@
 export const FeaturesSection = () => {
   return (
     <section
-      className="relative mx-2 mb-4 overflow-hidden rounded-xl bg-white py-20 sm:mx-4 sm:py-32 dark:bg-black"
+      className="relative mx-2 mb-4 overflow-hidden rounded-xl bg-black py-20 sm:mx-4 sm:py-32"
       id="features"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex justify-center">
           <div className="flex items-center gap-2">
-            <div className="h-4 w-4 rounded-full bg-black dark:bg-white"></div>
-            <div className="h-px w-4 bg-black dark:bg-white"></div>
+            <div className="h-4 w-4 rounded-full bg-white"></div>
+            <div className="h-px w-4 bg-white"></div>
             <div className="flex gap-1">
-              <div className="h-2 w-2 rounded-full bg-black dark:bg-white"></div>
-              <div className="h-2 w-2 rounded-full bg-black dark:bg-white"></div>
+              <div className="h-2 w-2 rounded-full bg-white"></div>
+              <div className="h-2 w-2 rounded-full bg-white"></div>
             </div>
           </div>
         </div>
 
         <div className="mb-4 text-center">
-          <h2 className="mb-4 font-medium text-4xl text-black font-serif tracking-tight sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
+          <h2 className="mb-4 font-medium text-4xl font-serif tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="text-emerald-500">Everyone</span> belongs in the ecosystem
           </h2>
-          <p className="mx-auto max-w-2xl text-base text-black/60 sm:text-lg dark:text-white/60">
+          <p className="mx-auto max-w-2xl text-base text-white/60 sm:text-lg">
             One ecosystem for every web3-er need.
-            {/* <br /> */}
           </p>
         </div>
 
@@ -35,12 +34,12 @@ export const FeaturesSection = () => {
                 Community
               </span>
             </div>
-            <h3 className="mb-8 font-medium text-2xl text-black tracking-tight sm:text-3xl dark:text-white">
+            <h3 className="mb-8 font-medium text-2xl tracking-tight text-white sm:text-3xl">
               Connect with peers.
             </h3>
-            <div className="flex-1 rounded-lg border border-black/10 bg-black/5 p-6 dark:border-white/5 dark:bg-zinc-900/50">
+            <div className="flex-1 rounded-lg border border-white/5 bg-zinc-900/50 p-6">
               <div className="space-y-4">
-                <p className="text-black/80 text-sm leading-relaxed dark:text-white/80">
+                <p className="text-white/80 text-sm leading-relaxed">
                   Join a vibrant community of developers, designers, and
                   creators. Share knowledge, collaborate on projects, and grow
                   together.
@@ -55,12 +54,12 @@ export const FeaturesSection = () => {
                 Projects
               </span>
             </div>
-            <h3 className="mb-8 font-medium text-2xl text-black tracking-tight sm:text-3xl dark:text-white">
+            <h3 className="mb-8 font-medium text-2xl tracking-tight text-white sm:text-3xl">
               Build your ideas.
             </h3>
-            <div className="flex-1 rounded-lg border border-black/10 bg-black/5 p-6 dark:border-white/5 dark:bg-zinc-900/50">
+            <div className="flex-1 rounded-lg border border-white/5 bg-zinc-900/50 p-6">
               <div className="space-y-4">
-                <p className="text-black/80 text-sm leading-relaxed dark:text-white/80">
+                <p className="text-white/80 text-sm leading-relaxed">
                   Create powerful projects that showcase your skills. Our
                   platform helps you collaborate, get feedback, and bring your
                   ideas to life.
@@ -75,12 +74,12 @@ export const FeaturesSection = () => {
                 Events
               </span>
             </div>
-            <h3 className="mb-8 font-medium text-2xl text-black tracking-tight sm:text-3xl dark:text-white">
+            <h3 className="mb-8 font-medium text-2xl tracking-tight text-white sm:text-3xl">
               Learn and grow.
             </h3>
-            <div className="flex-1 rounded-lg border border-black/10 bg-black/5 p-6 dark:border-white/5 dark:bg-zinc-900/50">
+            <div className="flex-1 rounded-lg border border-white/5 bg-zinc-900/50 p-6">
               <div className="space-y-4">
-                <p className="text-black/80 text-sm leading-relaxed dark:text-white/80">
+                <p className="text-white/80 text-sm leading-relaxed">
                   Attend workshops, hackathons, and networking events. Learn
                   from industry experts and connect with like-minded developers.
                 </p>
@@ -90,25 +89,25 @@ export const FeaturesSection = () => {
 
           <div className="flex flex-col">
             <div className="mb-2">
-              <span className="text-xs text-zinc-400 tracking-wide dark:text-zinc-500">
+              <span className="text-xs text-zinc-500 tracking-wide">
                 Earn
               </span>
             </div>
-            <h3 className="mb-8 font-medium text-2xl text-black tracking-tight sm:text-3xl dark:text-white">
+            <h3 className="mb-8 font-medium text-2xl tracking-tight text-white sm:text-3xl">
               Monetize your skills.
             </h3>
-            <div className="relative flex-1 overflow-hidden rounded-lg border border-black/10 bg-white p-6 dark:border-white/5 dark:bg-zinc-950">
+            <div className="relative flex-1 overflow-hidden rounded-lg border border-white/5 bg-zinc-950 p-6">
               <div className="relative flex h-full min-h-[200px] flex-col space-y-6">
                 <div className="space-y-1">
                   <div className="flex items-baseline gap-2">
-                    <span className="font-bold text-3xl text-black dark:text-white">
+                    <span className="font-bold text-3xl text-white">
                       38K
                     </span>
-                    <span className="font-medium text-black text-sm dark:text-white">
+                    <span className="font-medium text-white text-sm">
                       +30%
                     </span>
                   </div>
-                  <p className="text-black/60 text-xs dark:text-white/60">
+                  <p className="text-white/60 text-xs">
                     Monthly earnings
                   </p>
                 </div>
@@ -120,16 +119,16 @@ export const FeaturesSection = () => {
                         className="flex h-full flex-1 flex-col items-center justify-end"
                       >
                         <div
-                          className="relative w-full rounded-t-md bg-black/5 dark:bg-white/5"
+                          className="relative w-full rounded-t-md bg-white/5"
                           style={{ height: `${25 + i * 10}%` }}
                         >
                           <div className="-top-5 absolute right-0 left-0 text-center">
-                            <div className="font-medium text-[10px] text-black/40 dark:text-white/40">
+                            <div className="font-medium text-[10px] text-white/40">
                               +{1 + i * 0.5}k
                             </div>
                           </div>
                         </div>
-                        <span className="mt-2 text-[10px] text-black/30 dark:text-white/30">
+                        <span className="mt-2 text-[10px] text-white/30">
                           {month}
                         </span>
                       </div>

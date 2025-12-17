@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const GallerySection = () => {
-  const images = [1, 2, 3, 4, 5, 6, 7, 8].map((i) => `/community/${i}.png`);
+  const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((i) => `/community/${i}.png`);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export const GallerySection = () => {
 
   return (
     <section
-      className="relative mb-4 flex min-h-[70vh] items-center justify-center overflow-hidden rounded-xl bg-white py-16 sm:mx-4 sm:py-24 dark:bg-black"
+      className="relative mb-4 flex min-h-[70vh] items-center justify-center overflow-hidden rounded-xl py-16 sm:mx-4 sm:py-24 bg-black"
       id="gallery"
     >
       <div className="relative min-h-[70vh] w-full flex items-center justify-center">

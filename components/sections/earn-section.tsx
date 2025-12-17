@@ -80,26 +80,26 @@ export const EarnSection = () => {
 
   return (
     <section
-      className="relative mx-2 mb-4 overflow-hidden rounded-xl bg-white py-20 sm:mx-4 sm:py-32 dark:bg-black"
+      className="relative mx-2 mb-4 overflow-hidden rounded-xl bg-black py-20 sm:mx-4 sm:py-32"
       id="earn"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex justify-center">
           <div className="flex items-center gap-2">
-            <div className="h-4 w-4 rounded-full bg-black dark:bg-white"></div>
-            <div className="h-px w-4 bg-black dark:bg-white"></div>
+            <div className="h-4 w-4 rounded-full bg-white"></div>
+            <div className="h-px w-4 bg-white"></div>
             <div className="flex gap-1">
-              <div className="h-2 w-2 rounded-full bg-black dark:bg-white"></div>
-              <div className="h-2 w-2 rounded-full bg-black dark:bg-white"></div>
+              <div className="h-2 w-2 rounded-full bg-white"></div>
+              <div className="h-2 w-2 rounded-full bg-white"></div>
             </div>
           </div>
         </div>
 
         <div className="mb-12 text-center">
-          <h2 className="mb-4 font-medium text-4xl font-serif text-black tracking-tight sm:text-5xl md:text-6xl lg:text-7xl dark:text-white">
+          <h2 className="mb-4 font-medium text-4xl font-serif tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="text-emerald-500">Earn</span>
           </h2>
-          <p className="mx-auto max-w-3xl text-base text-black/70 tracking-tight sm:text-lg dark:text-white/70">
+          <p className="mx-auto max-w-3xl text-base tracking-tight text-white/70 sm:text-lg">
             Discover Multiple Opportunities to Earn within Our Community:
             Bounties, Hackathons, and Instagrants Await You!
           </p>
@@ -127,19 +127,19 @@ export const EarnSection = () => {
                     {opportunity.label}
                   </span>
                 </div>
-                <h3 className="mb-6 font-medium text-2xl font-serif text-black tracking-tight sm:text-3xl dark:text-white">
+                <h3 className="mb-6 font-medium text-2xl font-serif tracking-tight text-white sm:text-3xl">
                   {opportunity.title}
                 </h3>
-                <div className="flex-1 rounded-lg border border-black/10 bg-black/5 p-6 dark:border-white/5 dark:bg-zinc-900/50">
+                <div className="flex-1 rounded-lg border border-white/5 bg-zinc-900/50 p-6">
                   <div className="space-y-4">
-                    <p className="text-black/80 text-sm leading-relaxed dark:text-white/80">
+                    <p className="text-white/80 text-sm leading-relaxed">
                       {opportunity.description}
                     </p>
-                    <p className="text-black/70 text-sm leading-relaxed dark:text-white/70">
+                    <p className="text-white/70 text-sm leading-relaxed">
                       {opportunity.details}
                     </p>
                     {opportunity.subDetails && (
-                      <p className="text-black/60 text-sm leading-relaxed dark:text-white/60">
+                      <p className="text-white/60 text-sm leading-relaxed">
                         {opportunity.subDetails}
                       </p>
                     )}
@@ -149,7 +149,7 @@ export const EarnSection = () => {
                           href={opportunity.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-sm font-medium tracking-tight text-emerald-500 transition-colors hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300"
+                          className="inline-flex items-center gap-1 text-sm font-medium tracking-tight text-emerald-400 transition-colors hover:text-emerald-300"
                         >
                           {opportunity.linkText}
                           <ArrowUpRight className="h-4 w-4" />
@@ -160,7 +160,7 @@ export const EarnSection = () => {
                             <Link
                               key={i}
                               href={linkItem.href}
-                              className="inline-flex items-center gap-1 text-sm font-medium tracking-tight text-emerald-500 transition-colors hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300"
+                              className="inline-flex items-center gap-1 text-sm font-medium tracking-tight text-emerald-400 transition-colors hover:text-emerald-300"
                             >
                               {linkItem.text}
                               <ArrowUpRight className="h-4 w-4" />
@@ -181,16 +181,16 @@ export const EarnSection = () => {
           {additionalResources.map((resource, index) => (
             <div
               key={resource.title}
-              className="rounded-xl border border-black/10 bg-white/80 p-8 dark:border-white/10 dark:bg-black/60"
+              className="rounded-xl border border-white/10 bg-black/60 p-8"
             >
-              <h3 className="mb-4 font-medium text-2xl font-serif text-black tracking-tight sm:text-3xl dark:text-white">
+              <h3 className="mb-4 font-medium text-2xl font-serif tracking-tight text-white sm:text-3xl">
                 {resource.title}
               </h3>
-              <p className="mb-4 text-base text-black/70 leading-relaxed tracking-tight dark:text-white/70">
+              <p className="mb-4 text-base leading-relaxed tracking-tight text-white/70">
                 {resource.description}
               </p>
               {resource.steps && (
-                <ol className="mb-4 ml-5 list-decimal space-y-2 text-sm text-black/70 dark:text-white/70">
+                <ol className="mb-4 ml-5 list-decimal space-y-2 text-sm text-white/70">
                   {resource.steps.map((step, i) => (
                     <li key={i} className="leading-relaxed">
                       {step}
@@ -199,12 +199,12 @@ export const EarnSection = () => {
                 </ol>
               )}
               {resource.details && (
-                <p className="mb-4 text-sm text-black/70 leading-relaxed dark:text-white/70">
+                <p className="mb-4 text-sm leading-relaxed text-white/70">
                   {resource.details}
                 </p>
               )}
               {resource.cta && (
-                <p className="mb-4 text-sm font-medium text-black/80 dark:text-white/80">
+                <p className="mb-4 text-sm font-medium text-white/80">
                   {resource.cta}
                 </p>
               )}
